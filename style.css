@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(178, 178, 255);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(201, 143, 255);
+    z-index: 1000;
+    filter: drop-shadow(0px 10px 10px rgb(102, 98, 98));
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.topics ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 40px;
+    color: rgb(52, 35, 17);
+    font-weight: bold;
+}
+
+.topics ul li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding-right: 20px;
+}
+
+.topics ul li span {
+    padding: 0 7px;
+    font-family: "Kalnia", serif;
+}
+
+button {
+    background-color: rgb(188, 125, 247);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+main {
+    padding-top: 70px; /* To prevent content from hiding behind fixed nav */
+}
+
+.heading h1 {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 7%;
+    padding-bottom: 20px;
+    color: rgb(99, 74, 37);
+    filter: drop-shadow(0px 5px 10px rgb(185, 171, 148));
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px 0;
+    flex-wrap: wrap;
+}
+
+.image img {
+    width: 15%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border: 2px solid white;
+    border-radius: 7px;
+    transition: all 0.5s ease;
+}
+
+.image img:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    max-width: 60%;
+    margin: auto;
+    background-color: rgb(244, 242, 225);
+    border-radius: 30px;
+    padding: 20px;
+    font-family: "Inconsolata", monospace;
+    filter: drop-shadow(0px 5px 10px rgb(90, 90, 86));
+    margin-bottom: 30px;
+}
+
+.content p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: rgb(228, 152, 241);
+    text-align: center;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.foot {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot img {
+    height: 15px;
+}
+
+.foot a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
