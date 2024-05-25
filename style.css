@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(178, 178, 255);
+    background-color: rgba(40, 107, 98, 0.626);
     font-family: Arial, sans-serif;
 }
 
@@ -13,9 +13,10 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgb(201, 143, 255);
     z-index: 1000;
-    filter: drop-shadow(0px 10px 10px rgb(102, 98, 98));
+    backdrop-filter: blur(30px);
+    box-shadow: 10px 10px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 nav {
@@ -27,6 +28,16 @@ nav {
 
 .logo {
     width: 150px;
+}
+
+.menu-button {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.topics {
+    display: flex;
 }
 
 .topics ul {
@@ -51,7 +62,7 @@ nav {
 }
 
 button {
-    background-color: rgb(188, 125, 247);
+    background-color: rgba(45, 122, 112, 0.53);
     border: none;
     padding: 5px 10px;
     border-radius: 10px;
@@ -59,7 +70,8 @@ button {
 }
 
 main {
-    padding-top: 70px; /* To prevent content from hiding behind fixed nav */
+    padding-top: 70px;
+    /* To prevent content from hiding behind fixed nav */
 }
 
 .heading h1 {
@@ -69,6 +81,18 @@ main {
     padding-bottom: 20px;
     color: rgb(99, 74, 37);
     filter: drop-shadow(0px 5px 10px rgb(185, 171, 148));
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .image {
@@ -102,6 +126,7 @@ main {
     font-family: "Inconsolata", monospace;
     filter: drop-shadow(0px 5px 10px rgb(90, 90, 86));
     margin-bottom: 30px;
+    animation: fadeInUp 1.5s ease-in-out;
 }
 
 .content p {
@@ -110,26 +135,105 @@ main {
 }
 
 footer {
-    background-color: rgb(228, 152, 241);
+    background-color: rgba(97, 97, 116, 0.5);
+    backdrop-filter: blur(30px);
+    filter: drop-shadow(20px 20px 50px rgba(91, 77, 77, 0.537));
     text-align: center;
     padding: 20px;
     font-weight: bold;
+    color: rgb(255, 255, 255);
 }
 
 .foot {
-    padding: 10px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
+footer h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
 .foot img {
-    height: 15px;
+    height: 25px;
 }
 
 .foot a {
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+
+    .topics {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(201, 143, 255);
+    }
+
+    .topics ul {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .topics ul li {
+        padding-right: 0;
+    }
+
+    .heading h1 {
+        font-size: 40px;
+    }
+
+    .image img {
+        width: 30%;
+    }
+
+    .content {
+        max-width: 80%;
+        padding: 15px;
+    }
+
+    .content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 100px;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .heading h1 {
+        font-size: 30px;
+    }
+
+    .image img {
+        width: 45%;
+    }
+
+    .content {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
 }
