@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Website</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -15,7 +16,10 @@
             <div class="logo">
                 <img height="50px" src="tom&jerry.png" alt="Tom & Jerry Logo">
             </div>
-            <div class="topics">
+            <div class="menu-button" id="menu-button">
+                <span>&#9776;</span>
+            </div>
+            <div class="topics" id="nav-menu">
                 <ul>
                     <li><span>Home</span></li>
                     <li><span>Contact</span></li>
@@ -46,18 +50,18 @@
         </div>
         <div class="content">
             <p>
-                "Tom and Jerry" is a classic animated series created by William Hanna and Joseph Barbera. It revolves
-                around the comedic rivalry between Tom, a domestic cat, and Jerry, a clever mouse. Set in various
-                locations like houses, gardens, and even outer space, the show features slapstick humor, elaborate
-                chases, and clever schemes as Tom tries to catch Jerry, who always outsmarts him. Despite their constant
-                battles, there are moments of camaraderie and friendship between the two characters. "Tom and Jerry" has
-                entertained audiences of all ages for decades, with its timeless humor and iconic characters making it
-                one of the most beloved cartoons of all time.
+
+                "Tom and Jerry" is a classic animated series created by William Hanna and Joseph Barbera. It features
+                the comedic rivalry between Tom, a cat, and Jerry, a clever mouse. Set in various locations, the show is
+                known for its slapstick humor, elaborate chases, and clever schemes. Despite their constant battles,
+                there are moments of friendship between Tom and Jerry. This timeless cartoon has entertained audiences
+                of all ages for decades, making it one of the most beloved cartoons of all time.
+
             </p>
         </div>
     </main>
     <footer>
-        <p>This Webpage Created by Sayan</p>
+        <h2>This Webpage Created by Sayan</h2>
         <div class="foot">
             <img height="15px"
                 src="https://imgs.search.brave.com/sj2qX7fJgF3QkXKXo_dektzz9u9Itwmyaet5WHBcUGE/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODBiNTdmY2Q5OTk2/ZTI0YmM0M2M1MjEu/cG5n"
@@ -74,6 +78,17 @@
                 href="https://www.linkedin.com/in/sayan-ghosh-2b9a96270?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a>
         </div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuButton = document.getElementById('menu-button');
+            const navMenu = document.getElementById('nav-menu');
+
+            menuButton.addEventListener('click', () => {
+                navMenu.classList.toggle('topics');
+            });
+        });
+
+    </script>
 </body>
 
 </html>
